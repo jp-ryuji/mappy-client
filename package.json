@@ -11,6 +11,16 @@
   "repository": "https://github.com/jp-ryuji/mappy-client.git",
   "author": "Ryuji Eguchi <jp.ryuji@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "precommit": "lint-staged",
+    "lint:fix-all": "eslint --fix '*.js' '**/*.js'"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
