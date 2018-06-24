@@ -17,7 +17,10 @@
   ],
   "plugins": [
     "prettier",
-    "react"
+    "react",
+    "flowtype",
+    "jsx-a11y",
+    "import"
   ],
   "rules": {
     "prettier/prettier": [2, {
@@ -26,6 +29,22 @@
       "jsxBracketSameLine": true,
       "printWidth": 150
     }],
+    "react/jsx-filename-extension": [
+      1, { "extensions": [".js", ".jsx"] }
+    ],
+    "react/prefer-stateless-function": [
+      2, { "ignorePureComponents": true }
+    ],
+    "react/forbid-prop-types": [0, { "forbid": [] }],
+    "import/extensions": [1, "never", { "svg": "always" }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ],
     "func-names": [2, "as-needed"],
     "max-len": [2, { "code": 150, "ignoreComments": true }],
     "no-console": 0,
