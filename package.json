@@ -23,6 +23,18 @@
       "git add"
     ]
   },
+  "jest": {
+    "preset": "react-native",
+    "testMatch": [
+      "**/?(*.)spec.js?(x)"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest/setup.js"
+    ]
+  },
   "devDependencies": {
     "babel-eslint": "^8.2.5",
     "babel-preset-flow": "^6.23.0",
