@@ -14,10 +14,8 @@
   "scripts": {
     "precommit": "lint-staged",
     "lint": "eslint --fix '*.js' '**/*.js'",
-    "flow": "flow",
-    "flow-stop": "flow stop",
     "spec:unit": "jest",
-    "spec": "yarn lint && yarn flow && jest"
+    "spec": "yarn lint && jest"
   },
   "lint-staged": {
     "*.js": [
